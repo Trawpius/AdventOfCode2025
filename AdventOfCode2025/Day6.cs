@@ -15,7 +15,6 @@ namespace AdventOfCode2025
         {
             long sum = 0;
             string filename = Path.Combine( Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "puzzles", "Day6Puzzle1.txt");
-
             string[] content = File.ReadAllLines(filename);
             string[] operandsStr = content.Take(content.Length - 1).ToArray();
             long[][] operands = operandsStr.Select(x => x.Split(' ', options: StringSplitOptions.RemoveEmptyEntries).Select(y => long.Parse(y)).ToArray()).ToArray();
